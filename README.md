@@ -3,8 +3,9 @@ One photo. Right Disposal.
 Django REST API untuk klasifikasi sampah dan rekomendasi pembuangan.
 ## Setup, panduan menjalankan Sortify backend di lokal
 Pastikan sudah terinstall:
-Python 3.11 (wajib, untuk kompatibilitas TensorFlow)
-Link instalasi: https://www.python.org/downloads/release/python-3110/
+Python 3.11 (wajib, untuk kompatibilitas TensorFlow) | 
+Link instalasi: https://www.python.org/downloads/release/python-3110/ | 
+Dataset eksternal yang dipakai untuk model: https://www.kaggle.com/datasets/sumn2u/garbage-classification-v2
 
 # 1. Clone repo
 ```
@@ -16,7 +17,7 @@ cd Sortify-backend
 # Windows
 ```
 py -3.11 -m venv venv
-venv311\Scripts\activate
+venv\Scripts\activate
 ```
 
 # Mac/Linux
@@ -24,17 +25,13 @@ venv311\Scripts\activate
 python3.11 -m venv venv
 source venv/bin/activate
 ```
-# 3. Pindah ke folder Uni/IYREF 2025/sortify_backend
-``` 
-cd Uni/IYREF 2026/sortify_backend
-```
 
-# 4. Install dependencies
+# 3. Install dependencies
 ```
 pip install -r requirements.txt
 ```
 
-# 5. Download model
+# 4. Download model
 Folder models/ tidak disertakan di repo. Download modelnya di sini: https://drive.google.com/drive/folders/1MKT8-WK_tW45N8s0SLpqf6RH2JFBu1ld?usp=sharing dan unzip filenya.
 Letakkan di root folder sortify_backend:
 ```
@@ -45,7 +42,7 @@ sortify_backend/
     └── metadata.json
 ```
 
-# 6. Buat file .env berisi:
+# 5. Buat file .env berisi:
 ```
 SECRET_KEY=<your-secret-key-here> #Masukkan secret key yang diinginkan
 DEBUG=True
@@ -65,6 +62,7 @@ python scripts/seed_locations.py
 ```
 
 # 8. Jalankan server
+```
 python manage.py runserver
 ```
 
@@ -76,7 +74,7 @@ POST /api/classify/
 Content-Type: multipart/form-data
 
 Body: image (file) — foto sampah (jpg/png/webp)
-
+```
 ```
 Response:
 {

@@ -154,7 +154,7 @@ LOCATIONS_DATA = [
     },
     {
         "name": "Kompos",
-        "facility_type": "PENGOLAHAN_SAMPAH",
+        "facility_type": "TPS",
         "city": "Depok",
         "province": "Jawa Barat",
         "address": "HRW5+CHM, Pancoran Mas, Kec. Pancoran Mas, Kota Depok, Jawa Barat 16436",

@@ -26,7 +26,7 @@ class RecommendationDetailView(APIView):
             valid = list(RECOMMENDATIONS.keys())
             return Response(
                 {
-                    "error": f"Kategori '{category}' tidak ditemukan.",
+                    "error": f"Category '{category}' not found.",
                     "valid_categories": valid,
                 },
                 status=status.HTTP_404_NOT_FOUND,

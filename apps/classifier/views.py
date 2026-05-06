@@ -7,10 +7,6 @@ from apps.waste.recommendation import get_recommendation
 
 
 class ClassifyView(APIView):
-    """
-    POST /api/v1/classify/
-    Upload foto sampah → dapat kategori + rekomendasi buang
-    """
     parser_classes = [MultiPartParser]
 
     def post(self, request):
@@ -18,7 +14,7 @@ class ClassifyView(APIView):
         
         if not image_file:
             return Response(
-                {"error": "Field 'image' wajib diisi."},
+                {"error": "'image' field has to be filled."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
@@ -26,7 +22,7 @@ class ClassifyView(APIView):
         allowed_types = ["image/jpeg", "image/png", "image/webp"]
         if image_file.content_type not in allowed_types:
             return Response(
-                {"error": f"Format foto tidak didukung. Gunakan: jpg, png, webp."},
+                {"error": f"File format is not supported. Supported formats: jpg, png, webp."},
                 status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
             )
 
@@ -54,6 +50,6 @@ class ClassifyView(APIView):
             )
         except Exception as e:
             return Response(
-                {"error": f"Gagal memproses foto: {str(e)}"},
+                {"error": f"Failed to process the photo: {str(e)}"},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR,
             )
