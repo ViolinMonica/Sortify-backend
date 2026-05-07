@@ -65,7 +65,7 @@ class LocationListView(APIView):
 class LocationNearestView(APIView):
     """
     GET /api/v1/locations/nearest/?lat=-6.37&lng=106.83
-    Return 3 terdekat per facility type: BANK_SAMPAH, TPS, TPST
+    Return 3 terdekat per facility type: BANK_SAMPAH, TPS, TPST, TPA
     """
 
     def get(self, request):

@@ -206,7 +206,7 @@ LOCATIONS_DATA = [
     },
     {
         "name": "TPST Mutiara Bogor Raya",
-        "facility_type": "TPS",
+        "facility_type": "TPST",
         "city": "Bogor",
         "province": "Jawa Barat",
         "address": "9RFM+V33, RT.04/RW.16, Katulampa, Kec. Bogor Tim., Kota Bogor, Jawa Barat 16144",
