@@ -105,7 +105,7 @@ RECOMMENDATIONS = {
             "Metal/scrap iron is non-hazardous waste that can be recycled.",
             "Collect and sell to the nearest scrap metal collector.",
             "Beverage cans: rinse first, then sell to a waste bank.",
-            "⚠️ If it is industrial slag, contact a hazardous waste manager.",
+            "If it is industrial slag, contact a hazardous waste manager.",
         ],
         "penanganan": {
             "label": "Self-Recycling",
