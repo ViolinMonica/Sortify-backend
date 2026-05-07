@@ -114,6 +114,7 @@ GET /api/locations/?city=Depok               → filter by kota
 GET /api/locations/?type=BANK_SAMPAH         → filter by tipe
 GET /api/locations/?category=Plastik         → filter by kategori sampah
 GET /api/locations/cities/                   → daftar kota tersedia
+GET /api/locations/nearest/?lat=&lng=         -> disposal facility terdekat
 ```
 
 ## Struktur project

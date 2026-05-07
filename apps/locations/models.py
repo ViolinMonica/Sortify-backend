@@ -17,6 +17,8 @@ class Location(models.Model):
     address = models.TextField()
     phone = models.CharField(max_length=20, blank=True, default="")
     maps_url = models.URLField(blank=True, default="")
+    latitude = models.FloatField(default=0.0)
+    longitude = models.FloatField(default=0.0)
     is_active = models.BooleanField(default=True)
 
     class Meta:

@@ -17,6 +17,8 @@ class LocationSerializer(serializers.ModelSerializer):
             "city",
             "province",
             "address",
+            "latitude",
+            "longitude",
             "phone",
             "maps_url",
         ]
