@@ -89,7 +89,7 @@ class LocationNearestView(APIView):
 
         all_locations = list(Location.objects.filter(is_active=True))
 
-        facility_types = ["BANK_SAMPAH", "TPS", "TPST"]
+        facility_types = ["BANK_SAMPAH", "TPS", "TPST", "TPA"]
         result = {}
 
         for ftype in facility_types:
